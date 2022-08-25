@@ -1,1 +1,20 @@
-ocorrencias = [] while True:     opc = int(input('DIGITE A OPCAO:'))      if opc == 1:  # Cadastro         nome_pessoa = str(input('Digite seu nome: '))         cpf_pessoa = str(input('Digite seu cpf: '))         descricao = str(input('Digite a descricao: '))          ocorrencia = {             "id": 1,             "nome_pessoa": nome_pessoa,             "cpf_pessoa": cpf_pessoa,             "descricao": descricao         }         ocorrencias.append(ocorrencia)      elif opc == 2:  # Lista         print(ocorrencias)      elif opc == 3:  # Deletamento         id_deletamento = int(input("Digite o id da ocorrência que vocÊ deseja fazer o deletamento: "))          for i in range(len(ocorrencias)):             if ocorrencias[i]["id"] == id_deletamento:                 ocorrencias.pop(i)         print("deletamento")      elif opc == 4:         break      else:         print("Opcao invalida")
+ocorrencias = [] 
+while True:     
+	opc = int(input('DIGITE A OPCAO:'))      
+	if opc == 1:  # Cadastro         
+	nome_pessoa = str(input('Digite seu nome: '))        
+	cpf_pessoa = str(input('Digite seu cpf: '))  
+      descricao = str(input('Digite a descricao: '))          
+	ocorrencia = {             "id": 1,             "nome_pessoa": nome_pessoa,             "cpf_pessoa": cpf_pessoa,             "descricao": descricao         }         
+	ocorrencias.append(ocorrencia)      
+elif opc == 2:  # Lista         
+print(ocorrencias)      
+elif opc == 3:  # Deletamento         
+id_deletamento = int(input("Digite o id da ocorrência que vocÊ deseja fazer o deletamento: "))          
+	for i in range(len(ocorrencias)):             
+	if ocorrencias[i]["id"] == id_deletamento:                 
+	ocorrencias.pop(i)         
+	print("deletamento")      
+	elif opc == 4:         
+	break      
+else:         print("Opcao invalida")
