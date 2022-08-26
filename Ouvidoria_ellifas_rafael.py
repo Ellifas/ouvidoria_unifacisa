@@ -15,22 +15,21 @@ else:
     estalogado = False
     print('Usuário ou senha inválidas')
 ocorrencias =[]
-ids = []
+contador = 1
 if estalogado == True:
     while True:
         print('1.Cadastrar Ocorrência,2.Listar Ocorrências,3.Apagar Ocorrências,4.Sair')
         opc = int(input('Escolha a opção'))
         if opc == 1:
             print('Cadastrar ocorrências')
-            id += 1
             nome_pessoa = str(input("Digite o seu nome"))
             cpf_pessoa = str(input("Digte o seu cpf"))
             descricao = str(input("Digite a sua ocorrência"))
-            ocorrencia = { "id":1, 'Nome' : nome_pessoa,
+            ocorrencia = { "id": contador, 'Nome' : nome_pessoa,
                           "CPF" : cpf_pessoa,
                           'Ocorrência' : descricao }
             ocorrencias.append(ocorrencia)
-            ids.append(id)
+            contador += 1
         elif opc == 2:
             print(ocorrencias)
         elif opc == 3:
