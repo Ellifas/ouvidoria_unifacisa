@@ -1,0 +1,18 @@
+ while True:
+        print("Forneça o login para consultar as ocorrências registradas.")
+
+        lista = {i['login']: i for i in usuario}
+        lista2 = {i['id']: i for i in CPFS}
+        usu = input('Login:')
+
+        if usu in lista and usu not in lista2:
+            print(f'Dados do usuário [{usu.upper()}]: {lista[usu]}')
+
+            print("CPF não cadastrado!")
+
+        elif usu in lista and usu in lista2:
+            print(f'Dados do usuário [{usu.upper}]: {lista[usu]}')
+            print(f'CPF do usuário [{usu.upper()}:')
+            result = list(filter(lambda item: item['id'] == usu,sugestoes))
+            for i in result:
+                print(i)
